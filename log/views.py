@@ -58,5 +58,9 @@ def login(request):
              return redirect('login')
        
     return render(request, 'login.html')
+
+def logout(request):
+    request.session.clear()
+    return render(request,'home.html')
     
     
